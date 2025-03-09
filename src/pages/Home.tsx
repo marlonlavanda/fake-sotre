@@ -1,8 +1,9 @@
+import { ProductSection } from "../features/products/components/ProductSection";
 const Home = () => {
   return (
-    <div>
-      <h1>This is the homepage</h1>
-    </div>
+    <>
+      <ProductSection />
+    </>
   );
 };
 
