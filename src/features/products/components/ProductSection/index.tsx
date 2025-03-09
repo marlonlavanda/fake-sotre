@@ -7,9 +7,11 @@ export const ProductSection = () => {
   if (isError) return <div>Error: {error?.message}</div>;
 
   return (
-    <section className="product-section">
-      <h1>This is the product section</h1>
-      <ProductList products={products || []} />
+    <section className="section product-section">
+      <div className="container">
+        <h1>This is the product section</h1>
+        <ProductList products={products || []} />
+      </div>
     </section>
   );
 };

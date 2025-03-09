@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+@theme {
+  --aspect-retro: 4 / 3;
+}
+
+.section {
+  @apply flex justify-center items-center;
+}
