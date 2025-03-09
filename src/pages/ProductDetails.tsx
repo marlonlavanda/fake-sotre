@@ -1,5 +1,7 @@
 import { useParams } from "react-router";
 import { useProductDetails } from "../features/products/hooks/useProductDetails";
+import { FeaturedProduct } from "../features/products/components/FeaturedProduct";
+
 const ProductDetails = () => {
   const paramId = useParams();
   const id = paramId.id ? parseInt(paramId.id) : 0;
@@ -8,12 +10,7 @@ const ProductDetails = () => {
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error: {error?.message}</div>;
 
-  return (
-    <>
-      <div>Product Details</div>
-      <h1 className="text-2xl font-bold">{product?.title}</h1>
-    </>
-  );
+  return <>{product && <FeaturedProduct product={product} />}</>;
 };
 
 export default ProductDetails;
